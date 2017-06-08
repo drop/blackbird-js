@@ -8,8 +8,6 @@
 	The MIT License - Copyright (c) 2008 Blackbird Project
 */
 ( function() {
-	window.onerror = function(errorMsg, url, lineNumber) {log.error(errorMsg + ' ' + url + '  line:' + lineNumber); return true;};
-	
 	var NAMESPACE = 'console';
 	var IE6_POSITION_FIXED = true; // enable IE6 {position:fixed}
 	
@@ -353,4 +351,6 @@
 				removeEvent( document, 'keyup', readKey );
 			});
 		}
+	
+	window.onerror = function(errorMsg, url, lineNumber) { window[ NAMESPACE ].error((errorMsg + ' ' + url + '  line:' + lineNumber); return true;};
 })();
