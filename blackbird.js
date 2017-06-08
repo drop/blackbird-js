@@ -8,7 +8,9 @@
 	The MIT License - Copyright (c) 2008 Blackbird Project
 */
 ( function() {
-	var NAMESPACE = 'log';
+	window.onerror = function(errorMsg, url, lineNumber) {log.error(errorMsg + ' ' + url + '  line:' + lineNumber); return true;};
+	
+	var NAMESPACE = 'console';
 	var IE6_POSITION_FIXED = true; // enable IE6 {position:fixed}
 	
 	var bbird;
@@ -288,6 +290,8 @@
 			function( msg ) { addMessage( 'debug', msg ); },
 		warn:
 			function( msg ) { addMessage( 'warn', msg ); },
+		log:
+			function( msg ) { addMessage( 'info', msg ); },
 		info:
 			function( msg ) { addMessage( 'info', msg ); },
 		error:
