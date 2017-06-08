@@ -350,5 +350,5 @@
 			});
 		}
 	
-	window.onerror = function(errorMsg, url, lineNumber) { window[ NAMESPACE ].error((errorMsg + ' ' + url + '  line:' + lineNumber); return true;};
+	window.onerror = function(errorMsg, url, lineNumber) { window[ NAMESPACE ].error(errorMsg + ' ' + url + '  line:' + lineNumber); return true;};
 })();
