@@ -10,7 +10,7 @@
 ( function() {
 	var NAMESPACE = 'console';
 	var IE6_POSITION_FIXED = true; // enable IE6 {position:fixed}
-	var MAIN_KEY_CODE = 92; //backslash key
+	var MAIN_KEY_CODE = 220; //backslash key
 	
 	var bbird;
 	var outputList;
