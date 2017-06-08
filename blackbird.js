@@ -10,6 +10,7 @@
 ( function() {
 	var NAMESPACE = 'console';
 	var IE6_POSITION_FIXED = true; // enable IE6 {position:fixed}
+	var MAIN_KEY_CODE = 92; //backslash key
 	
 	var bbird;
 	var outputList;
@@ -244,12 +245,9 @@
 	//event handler for 'keyufor (p' event for window
 	function readKey( evt ) {
 		if ( !evt ) evt = window.event;
-		var code = 113; //F2 key
 					
-		if ( evt && evt.keyCode == code ) {
-					
-			var visible = isVisible();
-					
+		if ( evt && evt.keyCode == MAIN_KEY_CODE ) {
+			var visible = isVisible();		
 			if ( visible && evt.shiftKey && evt.altKey ) clear();
 			else if	 (visible && evt.shiftKey ) reposition();
 			else if ( !evt.shiftKey && !evt.altKey ) {
